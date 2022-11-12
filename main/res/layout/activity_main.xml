@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="10sp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wybierz swój zestaw do szydełkowania!"
+                android:textAlignment="center"
+                android:textSize="25sp"/>
+            <CheckBox
+                android:id="@+id/checkbox_hooks"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="1. Szydełko"/>
+            <Spinner
+                android:id="@+id/spinner_hooks"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <CheckBox
+                android:id="@+id/checkbox_first_yarn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="2. Kolor 1 włóczki"/>
+            <Spinner
+                android:id="@+id/spinner_first_yarn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <CheckBox
+                android:id="@+id/checkbox_second_yarn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="3. Kolor 2 włóczki"/>
+            <Spinner
+                android:id="@+id/spinner_second_yarn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <CheckBox
+                android:id="@+id/checkbox_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="4. Wzór"/>
+            <Spinner
+                android:id="@+id/spinner_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Cena:"/>
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="0zł"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Imię i nazwisko kupującego:"/>
+            <EditText
+                android:id="@+id/personal_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Numer telefonu do wysłania potwierdzenia"/>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Zamawiam"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
