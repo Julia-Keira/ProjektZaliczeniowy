@@ -253,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonOrderClick(){
             String name = editText.getText().toString();
+            String summerisePrice = (String) textViewcost.getText();
             if(!name.isEmpty()){
                 List<String> itemsSelected = new ArrayList<>();
                 if(hookCheck.isChecked()){
@@ -271,14 +272,13 @@ public class MainActivity extends AppCompatActivity {
                     itemsSelected.add((String) patternSpinner.getSelectedItem());
                     patternCheck.setChecked(false);
                 }
-                String summerisePrice = (String) textViewcost.getText();
+
                 String personalData = String.valueOf(editText.getText());
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
                 String currentDateandTime = sdf.format(new Date());
                 String number = editTextphone.getText().toString();
                 Order order = new Order(itemsSelected, personalData, summerisePrice, currentDateandTime, number, SmsManager.getDefault());
                 order.send(getApplicationContext());
-                textViewcost.setText("0zł");
                 Toast.makeText(getApplicationContext(), "Zamówienie wysłane", Toast.LENGTH_LONG).show();
             }else{
                 Toast.makeText(getApplicationContext(), "Proszę wpisać imię i nazwisko", Toast.LENGTH_LONG).show();
