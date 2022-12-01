@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +32,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompat {
     final List<String> hooks = Arrays.asList("Tulip Red cena: 40zł", "Clover Amour cena: 30zł", "Pony cena: 15zł");
     final List<Integer> hooksImg = Arrays.asList(R.drawable.tulip, R.drawable.clover, R.drawable.pony);
     final List<String> colours = Arrays.asList("Fioletowy cena: 7zł", "Czerwony cena: 7zł", "Beżowy cena: 7zł", "Niebieski cena: 7zł", "Zielony cena: 7zł", "Koralowy cena: 7zł");
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     CheckBox yarnFirstcheck;
     CheckBox yarnSecondcheck;
     CheckBox patternCheck;
+    ImageButton en;
+    ImageButton pl;
     int priceHook = 0;
     int priceFirstyarn = 0;
     int priceSecondyarn = 0;
@@ -99,16 +102,25 @@ public class MainActivity extends AppCompatActivity {
         yarnFirstcheck = findViewById(R.id.checkbox_first_yarn);
         yarnSecondcheck = findViewById(R.id.checkbox_second_yarn);
         patternCheck = findViewById(R.id.checkbox_pattern);
+        en = findViewById(R.id.english);
+        pl = findViewById(R.id.polish);
 
         spinnersSpin();
         substractOnUnchecked();
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                buttonOrderClick();
-            }
 
+        LanguageManager languageManager = new LanguageManager(this);
+        en.setOnClickListener(view ->{
+            languageManager.updateResources("en");
+            recreate();
         });
+
+        pl.setOnClickListener(view ->{
+            languageManager.updateResources("pl");
+            recreate();
+        });
+        button.setOnClickListener(view ->{
+            buttonOrderClick();
+            });
     }
 
     private void substractOnUnchecked() {

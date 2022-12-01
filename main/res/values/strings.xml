@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ProjektZaliczeniowy</string>
+    <string name="start">Wybierz swój zestaw do szydełkowania!</string>
+    <string name="hook">1. Szydełko</string>
+    <string name="first_colour">2. Kolor 1 włóczki</string>
+    <string name="second_colour">3. Kolor 2 włóczki</string>
+    <string name="pattern">4. Wzór</string>
+    <string name="price">Cena:</string>
+    <string name="name">Imię i nazwisko kupującego:</string>
+    <string name="number">Numer telefonu do wysłania potwierdzenia</string>
+    <string name="button">Zamawiam</string>
 </resources>

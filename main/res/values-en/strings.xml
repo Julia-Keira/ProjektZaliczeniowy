@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProjektZaliczeniowy</string>
+    <string name="start">Choose your crochet set!</string>
+    <string name="hook">1. Hook</string>
+    <string name="first_colour">2. Colour of first yarn</string>
+    <string name="second_colour">3. Colour of second yarn</string>
+    <string name="pattern">4. pattern</string>
+    <string name="price">Price:</string>
+    <string name="name">Name and Surname:</string>
+    <string name="number">Telephone number for sending confirmation</string>
+    <string name="button">Order</string>
+</resources>
